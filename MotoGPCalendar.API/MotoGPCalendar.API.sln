@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.API", "MotoGPCalendar.API.csproj", "{25E4A7AC-3C80-4DE5-A904-58BE6415472C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotoGPCalendar.API", "MotoGPCalendar.API.csproj", "{25E4A7AC-3C80-4DE5-A904-58BE6415472C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.Domain", "..\MotoGPCalendar.Domain\MotoGPCalendar.Domain.csproj", "{49D4E30C-C51F-4D44-9582-9239A66D3DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotoGPCalendar.Domain", "..\MotoGPCalendar.Domain\MotoGPCalendar.Domain.csproj", "{49D4E30C-C51F-4D44-9582-9239A66D3DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.Data", "..\MotoGPCalendar.Data\MotoGPCalendar.Data.csproj", "{6835E1B9-F169-4507-B1B6-77605AAB8468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotoGPCalendar.Data", "..\MotoGPCalendar.Data\MotoGPCalendar.Data.csproj", "{6835E1B9-F169-4507-B1B6-77605AAB8468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.Business", "..\MotoGPCalendar.Business\MotoGPCalendar.Business.csproj", "{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6835E1B9-F169-4507-B1B6-77605AAB8468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6835E1B9-F169-4507-B1B6-77605AAB8468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6835E1B9-F169-4507-B1B6-77605AAB8468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
