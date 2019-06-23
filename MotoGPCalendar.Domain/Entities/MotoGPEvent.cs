@@ -2,7 +2,7 @@
 
 namespace MotoGPCalendar.Domain.Entities
 {
-    class MotoGPEvent
+    public class MotoGPEvent
     {
         public int Id { get; set; }
         public DateTime EventDate { get; set; }
