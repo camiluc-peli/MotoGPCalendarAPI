@@ -1,19 +1,19 @@
-﻿using MotoGPCalendar.Domain.Entities;
+﻿using System;
 using System.Collections.Generic;
 
 namespace MotoGPCalendar.Business.Handlers
 {
     public class CountryHandler
     {
-        public List<Country> GetAll()
+        public List<Object> GetAll()
         {
             throw new System.NotImplementedException();
         }
-        public Country GetById(int id)
+        public Object GetById(int id)
         {
             throw new System.NotImplementedException();
         }
-        public void Insert(Country country)
+        public void Insert(Object country)
         {
             throw new System.NotImplementedException();
         }

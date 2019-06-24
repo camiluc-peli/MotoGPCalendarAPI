@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using MotoGPCalendar.Domain.Entities;
+﻿using MotoGPCalendar.Domain.Entities;
+using System.Collections.Generic;
 namespace MotoGPCalendar.Data.Repositories
 {
     public interface ICircuitRepository

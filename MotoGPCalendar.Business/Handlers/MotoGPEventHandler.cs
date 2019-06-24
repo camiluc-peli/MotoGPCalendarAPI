@@ -1,21 +1,45 @@
-﻿using MotoGPCalendar.Domain.Entities;
+﻿using MotoGPCalendar.Data.Repositories;
+using MotoGPCalendar.DTOs;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MotoGPCalendar.Business.Handlers
 {
     public class MotoGPEventHandler
     {
-        public List<MotoGPEvent> GetAll()
+        private IMotoGPEventRepository _repo;
+
+        public MotoGPEventHandler(IMotoGPEventRepository repo)
         {
-            throw new System.NotImplementedException();
+            _repo = repo;
         }
-        public MotoGPEvent GetById(int id)
+        public List<EventDTO> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _repo.GetAll().Select(
+                x => new EventDTO
+                {
+                    EventDate = x.EventDate,
+                    EventName = x.EventName,
+                    CircuitName = x.Circuit.Name,
+                    CountryName = x.Circuit.Country.Name
+                }).OrderByDescending(x => x.EventDate).ToList();
         }
-        public void Insert(MotoGPEvent motoGPevent)
+        public EventDetailsDTO GetById(int id)
         {
-            throw new System.NotImplementedException();
+            var ev = _repo.GetById(id);
+
+            return new EventDetailsDTO()
+            {
+                EventDate = ev.EventDate,
+                EventName = ev.EventName,
+                CircuitName = ev.Circuit.Name,
+                CountryName = ev.Circuit.Country.Name,
+                CircuitLength = ev.Circuit.Length,
+                CircuitCurvesNumber = ev.Circuit.CurvesNumber,
+                CircuitWidth = ev.Circuit.Width,
+                CircuitLongestStraight = ev.Circuit.LongestStraight,
+                CircuitRecord = ev.Circuit.Record
+            };
         }
     }
 }

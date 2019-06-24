@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MotoGPCalendar.Data\MotoGPCalendar.Data.csproj" />
+    <ProjectReference Include="..\MotoGPCalendar.DTOs\MotoGPCalendar.DTOs.csproj" />
   </ItemGroup>
 
 </Project>

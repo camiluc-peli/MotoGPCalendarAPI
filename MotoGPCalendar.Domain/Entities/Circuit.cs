@@ -8,7 +8,7 @@
         public double Length { get; set; }
         public double Width { get; set; }
         public int CurvesNumber { get; set; }
-        public double LongerStraight { get; set; }
+        public double LongestStraight { get; set; }
         public double Record { get; set; }
     }
 }

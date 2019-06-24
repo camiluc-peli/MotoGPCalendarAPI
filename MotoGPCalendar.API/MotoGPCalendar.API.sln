@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotoGPCalendar.Data", "..\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.Business", "..\MotoGPCalendar.Business\MotoGPCalendar.Business.csproj", "{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotoGPCalendar.DTOs", "..\MotoGPCalendar.DTOs\MotoGPCalendar.DTOs.csproj", "{36993889-5F9D-412C-8FCA-EDCE147A6435}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{548A36C9-0D53-47E0-AE4A-B548ADFCC1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36993889-5F9D-412C-8FCA-EDCE147A6435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36993889-5F9D-412C-8FCA-EDCE147A6435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36993889-5F9D-412C-8FCA-EDCE147A6435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36993889-5F9D-412C-8FCA-EDCE147A6435}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
