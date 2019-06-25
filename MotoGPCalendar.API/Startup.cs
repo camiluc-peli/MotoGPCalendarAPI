@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MotoGPCalendar.Business.Handlers;
+using MotoGPCalendar.Business.Services;
 using MotoGPCalendar.Data;
 using MotoGPCalendar.Data.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
@@ -26,7 +26,7 @@ namespace MotoGPCalendar.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddScoped<MotoGPEventHandler>();
+            services.AddScoped<MotoGPEventService>();
             services.AddScoped<IMotoGPEventRepository, MotoGPEventRepository>();
             services.AddScoped<MotoGPCalendarContext>();
           
