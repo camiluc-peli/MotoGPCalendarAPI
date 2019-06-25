@@ -7,6 +7,5 @@ namespace MotoGPCalendar.Data.Repositories
     {
         List<MotoGPEvent> GetAll();
         MotoGPEvent GetById(int id);
-        void Insert(MotoGPEvent motoGPEvent);
     }
 }

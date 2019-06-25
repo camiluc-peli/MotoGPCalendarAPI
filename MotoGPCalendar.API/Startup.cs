@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MotoGPCalendar.Business.Handlers;
+using MotoGPCalendar.Data;
 using MotoGPCalendar.Data.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Reflection;
@@ -27,7 +28,8 @@ namespace MotoGPCalendar.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddScoped<MotoGPEventHandler>();
             services.AddScoped<IMotoGPEventRepository, MotoGPEventRepository>();
-
+            services.AddScoped<MotoGPCalendarContext>();
+          
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
