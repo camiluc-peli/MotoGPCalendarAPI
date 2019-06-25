@@ -1,1 +1,5 @@
 In this file I am listing all the resources and documentation I have used to develop this solution.
+
+Using UI for Docker (Dock Station): https://www.techrepublic.com/article/how-to-install-and-use-dockstation-for-easy-container-builds/
+Using Entity FrameWork Core with MySQL: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-example.html
+Use and start MySQL image for Docker: https://hub.docker.com/_/mysql?tab=description
