@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using MotoGPCalendar.Business.Handlers;
+using System.Threading.Tasks;
 
 namespace MotoGPCalendar.API.Controllers
 {
+    [Produces("application/json")]
     [Route("api/events")]
     [ApiController]
     public class MotoGPEventController : ControllerBase
@@ -18,9 +20,9 @@ namespace MotoGPCalendar.API.Controllers
         /// </summary>
         /// <returns>JSON with all the events and their basic data.</returns>
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> GetAsync()
         {
-            return new JsonResult(_handler.GetAll());
+            return new JsonResult(await _handler.GetAllAsync());
 
         }
         /// <summary>
@@ -29,9 +31,9 @@ namespace MotoGPCalendar.API.Controllers
         /// <param name="id">The id of the event.</param>
         /// <returns>JSON with detailed data about the given event.</returns>
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<string>> Get(int id)
         {
-            return new JsonResult(_handler.GetById(id));
+            return new JsonResult(await _handler.GetByIdAsync(id));
         }
     }
 }

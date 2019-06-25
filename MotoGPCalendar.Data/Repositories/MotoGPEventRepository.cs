@@ -1,6 +1,7 @@
-﻿using MotoGPCalendar.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MotoGPCalendar.Domain.Entities;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace MotoGPCalendar.Data.Repositories
 {
@@ -12,14 +13,14 @@ namespace MotoGPCalendar.Data.Repositories
         {
             _context = context;
         }
-        public List<MotoGPEvent> GetAll()
+        public async Task<List<MotoGPEvent>> GetAllAsync()
         {
-            return _context.MotoGPEvent.ToList();
+            return await _context.MotoGPEvent.ToListAsync();
         }
 
-        public MotoGPEvent GetById(int id)
+        public async Task<MotoGPEvent> GetByIdAsync(int id)
         {
-            return _context.MotoGPEvent.Find(id);
+            return await _context.MotoGPEvent.FindAsync(id);
         }
     }
 }

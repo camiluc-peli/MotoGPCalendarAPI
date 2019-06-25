@@ -78,7 +78,7 @@ namespace MotoGPCalendar.API
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "MotoGP Calendar API");
             });
-
+            
             app.UseMvc();
         }
     }
