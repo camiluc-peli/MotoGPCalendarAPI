@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MotoGPCalendar.Business.Handlers;
+using MotoGPCalendar.Data;
 using MotoGPCalendar.Data.Repositories;
 
 namespace MotoGPCalendar.API
@@ -30,6 +31,7 @@ namespace MotoGPCalendar.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddScoped<MotoGPEventHandler>();
             services.AddScoped<IMotoGPEventRepository, MotoGPEventRepository>();
+            services.AddScoped<MotoGPCalendarContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,23 +1,25 @@
 ﻿using MotoGPCalendar.Domain.Entities;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MotoGPCalendar.Data.Repositories
 {
     public class MotoGPEventRepository : IMotoGPEventRepository
     {
+        private MotoGPCalendarContext _context;
+
+        public MotoGPEventRepository(MotoGPCalendarContext context)
+        {
+            _context = context;
+        }
         public List<MotoGPEvent> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _context.MotoGPEvent.ToList();
         }
 
         public MotoGPEvent GetById(int id)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void Insert(MotoGPEvent motoGPEvent)
-        {
-            throw new System.NotImplementedException();
+            return _context.MotoGPEvent.Find(id);
         }
     }
 }
