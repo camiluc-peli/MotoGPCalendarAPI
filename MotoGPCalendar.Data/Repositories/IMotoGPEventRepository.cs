@@ -1,11 +1,12 @@
 ﻿using MotoGPCalendar.Domain.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MotoGPCalendar.Data.Repositories
 {
     public interface IMotoGPEventRepository
     {
-        List<MotoGPEvent> GetAll();
-        MotoGPEvent GetById(int id);
+        Task<List<MotoGPEvent>> GetAllAsync();
+        Task<MotoGPEvent> GetByIdAsync(int id);
     }
 }

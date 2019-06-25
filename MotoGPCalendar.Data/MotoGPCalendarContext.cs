@@ -11,7 +11,7 @@ namespace MotoGPCalendar.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("Server=localhost;Port=3306;Database=MotoGPCalendar;Uid=root;Pwd=Camila.2019;");
+            optionsBuilder.UseMySQL("Server=localhost;Port=3306;Database=MotoGPCalendar;userid=app;Pwd=Camila.2019;persistsecurityinfo=True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

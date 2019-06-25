@@ -2,6 +2,7 @@
 using MotoGPCalendar.DTOs;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MotoGPCalendar.Business.Handlers
 {
@@ -13,20 +14,22 @@ namespace MotoGPCalendar.Business.Handlers
         {
             _repo = repo;
         }
-        public List<EventDTO> GetAll()
+        public async Task<List<EventDTO>> GetAllAsync()
         {
-            return _repo.GetAll().Select(
-                x => new EventDTO
-                {
-                    EventDate = x.EventDate,
-                    EventName = x.EventName,
-                    CircuitName = x.Circuit.Name,
-                    CountryName = x.Circuit.Country.Name
-                }).OrderByDescending(x => x.EventDate).ToList();
+            var list = await _repo.GetAllAsync();
+                
+            return list.Select(
+            x => new EventDTO
+            {
+                EventDate = x.EventDate,
+                EventName = x.EventName,
+                CircuitName = x.Circuit.Name,
+                CountryName = x.Circuit.Country.Name
+            }).OrderByDescending(x => x.EventDate).ToList();
         }
-        public EventDetailsDTO GetById(int id)
+        public async Task<EventDetailsDTO> GetByIdAsync(int id)
         {
-            var ev = _repo.GetById(id);
+            var ev = await _repo.GetByIdAsync(id);
 
             return new EventDetailsDTO()
             {
