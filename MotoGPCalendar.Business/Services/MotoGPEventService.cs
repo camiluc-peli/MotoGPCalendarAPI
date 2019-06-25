@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MotoGPCalendar.Business.Handlers
+namespace MotoGPCalendar.Business.Services
 {
-    public class MotoGPEventHandler
+    public class MotoGPEventService
     {
         private IMotoGPEventRepository _repo;
 
-        public MotoGPEventHandler(IMotoGPEventRepository repo)
+        public MotoGPEventService(IMotoGPEventRepository repo)
         {
             _repo = repo;
         }
