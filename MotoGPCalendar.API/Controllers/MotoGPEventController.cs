@@ -13,14 +13,21 @@ namespace MotoGPCalendar.API.Controllers
         {
             _handler = handler;
         }
-
+        /// <summary>
+        /// Provides a JSON with all the MotoGP events and their basic data.
+        /// </summary>
+        /// <returns>JSON with all the events and their basic data.</returns>
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new JsonResult(_handler.GetAll());
 
         }
-
+        /// <summary>
+        /// Provides JSON with detailed data about the given event.
+        /// </summary>
+        /// <param name="id">The id of the event.</param>
+        /// <returns>JSON with detailed data about the given event.</returns>
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {

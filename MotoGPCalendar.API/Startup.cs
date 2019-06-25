@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using MotoGPCalendar.Business.Handlers;
 using MotoGPCalendar.Data.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
+using System.IO;
+using System;
 
 namespace MotoGPCalendar.API
 {
@@ -25,9 +28,27 @@ namespace MotoGPCalendar.API
             services.AddScoped<MotoGPEventHandler>();
             services.AddScoped<IMotoGPEventRepository, MotoGPEventRepository>();
 
+            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "MotoGP Calendar API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "MotoGP Calendar API",
+                    Description = "This API provides the information regarding to MotoGP events.",
+                    TermsOfService = "None",
+                    Contact = new Contact
+                    {
+                        Name = "Camila Lucía Pérez Liria",
+                        Email = "camiluc.peli@gmail.com",
+                        Url = "https://www.linkedin.com/in/camiluc-peli/"
+                    }
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 
