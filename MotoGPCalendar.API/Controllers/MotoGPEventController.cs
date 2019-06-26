@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MotoGPCalendar.Business.Services;
 using System.Threading.Tasks;
+using MotoGPCalendar.DTOs;
 
 namespace MotoGPCalendar.API.Controllers
 {
@@ -20,9 +21,9 @@ namespace MotoGPCalendar.API.Controllers
         /// </summary>
         /// <returns>JSON with all the events and their basic data.</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<string>>> GetAsync()
+        public async Task<IEnumerable<EventDTO>> GetAsync()
         {
-            return new JsonResult(await _service.GetAllAsync());
+            return await _service.GetAllAsync();
 
         }
         /// <summary>
@@ -31,9 +32,9 @@ namespace MotoGPCalendar.API.Controllers
         /// <param name="id">The id of the event.</param>
         /// <returns>JSON with detailed data about the given event.</returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> Get(int id)
+        public async Task<EventDetailsDTO> Get(int id)
         {
-            return new JsonResult(await _service.GetByIdAsync(id));
+            return await _service.GetByIdAsync(id);
         }
     }
 }
