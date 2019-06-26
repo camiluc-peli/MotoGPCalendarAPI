@@ -15,12 +15,15 @@ namespace MotoGPCalendar.Data.Repositories
         }
         public async Task<List<MotoGPEvent>> GetAllAsync()
         {
-            return await _context.MotoGPEvent.ToListAsync();
+            return await _context.MotoGPEvent.Include(c => c.Circuit).ThenInclude(c => c.Country).ToListAsync();
         }
 
         public async Task<MotoGPEvent> GetByIdAsync(int id)
         {
-            return await _context.MotoGPEvent.FindAsync(id);
+            return await _context.MotoGPEvent
+                .Include(c => c.Circuit)
+                .ThenInclude(c => c.Country)
+                .SingleOrDefaultAsync(t => t.Id == id);
         }
     }
 }
