@@ -1,0 +1,33 @@
+Here I am explaining the steps I followed to develop this solution and some problems that I found.
+
+Challenge:
+	Create a Web API with .Net Core 2.2 and C#.
+	Use mySQL Database and EntityFrameworkCore.
+	Create Unit Tests.
+	Create Integration Tests.
+	Run MySQL server in Docker.
+	Run the application in Docker.
+
+Steps:
+	1. Investigate about common architectures for .Net Core APIs, in that case I am learning and following N-Tiered/N-Layered Architecture.
+	2. Investigate about common branches in git to structure my changes.
+	3. Create basic solution structure with different projects for API (Controllers), Business Logic, Data (Access to Database), Domain (entities for the Data), and DTOs.
+	4. Start basic implementation, adding dependencies between projects and dependency injeccion.
+	5. Investigate about Docker and MySQL.
+	6. Download and install Docker, MySQL Workbench and DockStation.
+	7. Install and run MySQL image in Docker.
+	8. Connect from MySQL Workbench to MySQL server running in Docker.
+	9. Create DBContext to use MySQL DB in the solution, prepare connection string and create specific user for the application.
+	10. Create mappings and run it to generate the DB.
+	11. Refactor code to create asyncronous methods.
+	12. Generate basin Swagger documentation.
+	13. Learn about testing.
+
+Main difficulties: 
+	- Because I did not want to copy someone else architecture, I struggled a little bit deciding what projects I ned and where to put everything.
+	Specifically, I thought a lot about using DTO's from Data Layer (creating query to get specific data to create the DTO), or usign DTOs in Business Layer (getting all the data from the DB and after that taking what I need).
+	At the end I felt more intuitive for me to do it in the business layer, and I did not think it was going to affect the performance in this case since the data I am getting is quite little.
+	- At first, it was complicated for me to configure MySQL in Docker because I was following a tutorial to do it by command line but I was using DockStation so I was not finding everything fast, but at the end I got used to the interface of DockStations and now I understand quite well how to work with it.
+	- I had some problems with the connection string for mySQL and other connection problems. 
+	At first I used the root user and the root password, but I got an error because I had ';' character in the password and that was making the connection string to fail.
+	Once I fixed that, I created a new specific user for the application, but I had a quite obvious mistake that toke me a lot of time: since I created the user through MySQL Workbench interface, I completly forgot to assign privileges.

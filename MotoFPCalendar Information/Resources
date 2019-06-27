@@ -1,0 +1,21 @@
+In this file I am listing the main resources and documentation I have used to develop this solution.
+
+Installations:
+	Visual Studio 2019: https://visualstudio.microsoft.com/es/vs/
+	Visual Studio Code: https://code.visualstudio.com/?wt.mc_id=DX_841432
+	Docker: https://www.docker.com/products/docker-desktop
+	DockStation: https://dockstation.io/
+	MySQL Workbench: https://dev.mysql.com/downloads/workbench/
+
+Tutorials/Documentation:
+	Clean Architecture for ASP.NET Core Web APIs: https://fullstackmark.com/post/18/building-aspnet-core-web-apis-with-clean-architecture
+	N-Tiered vs N-Layered Architecture: https://stackoverflow.com/questions/1182303/n-tiered-vs-n-layered-architecture-design
+	Layer Architecture with .Net: https://www.codeproject.com/Articles/36847/Three-Layer-Architecture-in-C-NET-2
+	Using UI for Docker (Dock Station): https://www.techrepublic.com/article/how-to-install-and-use-dockstation-for-easy-container-builds/
+	Use and start MySQL image for Docker: https://hub.docker.com/_/mysql?tab=description
+	Connect MySQL Workbench to MySQL Server inside Docker: https://stackoverflow.com/questions/33827342/how-to-connect-mysql-workbench-to-running-mysql-inside-docker
+	Using Entity FrameWork Core with MySQL: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-example.html
+	Swagger documentation for APIs: https://docs.microsoft.com/en-us/learn/modules/improve-api-developer-experience-with-swagger/
+
+Data:
+	Countries: https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
