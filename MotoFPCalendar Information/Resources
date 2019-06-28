@@ -17,5 +17,12 @@ Tutorials/Documentation:
 	Using Entity FrameWork Core with MySQL: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-example.html
 	Swagger documentation for APIs: https://docs.microsoft.com/en-us/learn/modules/improve-api-developer-experience-with-swagger/
 
+	Unit Testing: 
+		- https://www.c-sharpcorner.com/article/moq-mocking-framework-with-xunit-net-testing-fr/
+		- https://blogs.encamina.com/piensa-en-software-desarrolla-en-colores/moq-net-introduccion-utilizarlo-ejemplos/
+		- https://www.codeproject.com/Articles/1239785/Implementing-and-Testing-Repository-Pattern-using
+		- https://stackoverflow.com/questions/50766313/unit-testing-a-business-logic-interface
+
 Data:
 	Countries: https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
+
