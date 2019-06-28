@@ -1,5 +1,5 @@
 # MotoGPCalendarAPI
-This is my first "from scratch" web API. I have build it by reading different resources and documentation.
+This is my first "from scratch" web API. I have built it by reading different resources and documentation.
 I will be grateful if you provide any feedback so I can improve.
 
 .Net Core 2.2 API with C#.
