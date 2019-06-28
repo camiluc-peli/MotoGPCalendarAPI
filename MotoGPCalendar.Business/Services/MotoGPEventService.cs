@@ -21,6 +21,7 @@ namespace MotoGPCalendar.Business.Services
             return list.Select(
             x => new EventDTO
             {
+                Id = x.Id,
                 EventDate = x.EventDate,
                 EventName = x.EventName,
                 CircuitName = x.Circuit.Name,
@@ -33,6 +34,7 @@ namespace MotoGPCalendar.Business.Services
 
             return new EventDetailsDTO()
             {
+                Id = ev.Id,
                 EventDate = ev.EventDate,
                 EventName = ev.EventName,
                 CircuitName = ev.Circuit.Name,
