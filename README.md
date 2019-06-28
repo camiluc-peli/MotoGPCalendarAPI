@@ -7,6 +7,5 @@ Database: Code-first with Entity Framework Core and MySQL running in Docker.
 API Documentation with Swagger.
 
 You can find documents with the resources I have used and personal annotations in the folder named "MotoGPCalendar Information".
-You will always find the latest changes in this folder in the branch "documentation" created from "master".
 
 Thank you!
