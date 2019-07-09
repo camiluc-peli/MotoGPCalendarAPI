@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using MotoGPCalendar.Business.Services;
-using System.Threading.Tasks;
 using MotoGPCalendar.DTOs;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MotoGPCalendar.API.Controllers
 {
